@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #ffffff;
+  --bg-secondary: #f0fdf4;
+  --text: #166534;
+  --accent: #15803d;
+  --accent-hover: #16a34a;
+}
+
+.dark {
+  --bg: #121212;
+  --bg-secondary: #1e1e1e;
+  --text: #f97316;
+  --accent: #ea580c;
+  --accent-hover: #fb923c;
+}
+
+body {
+  @apply antialiased;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+/* Light: green accents */
+.light .btn-primary {
+  @apply bg-primary hover:bg-primary-light text-white shadow-glow-green transition-all duration-300 hover:scale-[1.02] active:scale-[0.98];
+}
+
+/* Dark: orange glow */
+.dark .btn-primary {
+  @apply bg-accent hover:bg-accent-light text-white shadow-glow transition-all duration-300 hover:scale-[1.02] active:scale-[0.98];
+}
+
+.dark input,
+.dark select,
+.dark textarea {
+  @apply bg-gray-800 border-gray-600 text-orange-200 placeholder-gray-500;
+}
+
+.light input,
+.light select,
+.light textarea {
+  @apply bg-white border-green-200 text-green-900 placeholder-green-400;
+}
+
+/* Stagger animation delays */
+.animate-delay-100 { animation-delay: 100ms; }
+.animate-delay-200 { animation-delay: 200ms; }
+.animate-delay-300 { animation-delay: 300ms; }
+.animate-delay-400 { animation-delay: 400ms; }
+
+/* Card hover lift */
+.card-hover {
+  @apply transition-all duration-300 ease-out;
+}
+.light .card-hover:hover {
+  @apply shadow-card-hover -translate-y-0.5;
+}
+.dark .card-hover:hover {
+  @apply shadow-card-dark-hover -translate-y-0.5;
+}
+
+/* Gradient hero backgrounds */
+.hero-gradient-light {
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 50%, #bbf7d0 100%);
+}
+.hero-gradient-dark {
+  background: linear-gradient(135deg, #121212 0%, #1c1917 50%, #292524 100%);
+}
