@@ -3,24 +3,37 @@ import { createContext, useContext, useEffect, useState } from 'react';
 const ThemeContext = createContext();
 
 const THEME_KEY = 'farmer-app-theme';
+const THEMES = ['light', 'dark', 'bright'];
 
 export function ThemeProvider({ children }) {
-  const [isDark, setIsDark] = useState(() => {
+  const [theme, setTheme] = useState(() => {
     const saved = localStorage.getItem(THEME_KEY);
-    if (saved !== null) return saved === 'dark';
-    return window.matchMedia?.('(prefers-color-scheme: dark)')?.matches ?? false;
+    if (saved) return saved;
+    // fall back to system preference
+    return window.matchMedia?.('(prefers-color-scheme: dark)')?.matches
+      ? 'dark'
+      : 'light';
   });
 
   useEffect(() => {
-    localStorage.setItem(THEME_KEY, isDark ? 'dark' : 'light');
-    document.documentElement.classList.toggle('dark', isDark);
-    document.documentElement.classList.toggle('light', !isDark);
-  }, [isDark]);
+    localStorage.setItem(THEME_KEY, theme);
+    // ensure only one of the theme classes is present
+    document.documentElement.classList.remove(...THEMES);
+    document.documentElement.classList.add(theme);
+  }, [theme]);
 
-  const toggle = () => setIsDark((p) => !p);
+  // cycle through themes: light -> dark -> bright -> light
+  const toggle = () => {
+    const idx = THEMES.indexOf(theme);
+    const next = THEMES[(idx + 1) % THEMES.length];
+    setTheme(next);
+  };
+
+  const isDark = theme === 'dark';
+  const isBright = theme === 'bright';
 
   return (
-    <ThemeContext.Provider value={{ isDark, toggle }}>
+    <ThemeContext.Provider value={{ theme, isDark, isBright, toggle }}>
       {children}
     </ThemeContext.Provider>
   );

@@ -5,7 +5,7 @@ import { useTheme } from '../contexts/ThemeContext';
 
 export default function Layout({ children }) {
   const { user, logout, isAdmin } = useAuth();
-  const { isDark, toggle } = useTheme();
+  const { theme, isDark, isBright, toggle } = useTheme();
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const navClass = ({ isActive }) =>
@@ -33,7 +33,11 @@ export default function Layout({ children }) {
   ];
 
   return (
-    <div className="min-h-screen bg-white dark:bg-[#121212] text-green-900 dark:text-orange-100">
+    <div className={`min-h-screen ${
+      isDark
+        ? 'bg-[#121212] text-orange-100'
+        : 'bg-white ' + (isBright ? 'text-green-600' : 'text-green-900')
+    }`}>
       <header className="sticky top-0 z-40 border-b-2 border-green-200 dark:border-gray-700 bg-white/95 dark:bg-[#1e1e1e] backdrop-blur shadow-sm">
         <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-14">
           <button
@@ -60,7 +64,7 @@ export default function Layout({ children }) {
               className="p-2 rounded-xl bg-green-100 dark:bg-gray-700 text-green-700 dark:text-orange-400 transition-transform hover:scale-110"
               aria-label="Toggle theme"
             >
-              {isDark ? '☀️' : '🌙'}
+              {isDark ? (isBright ? '✨' : '☀️') : isBright ? '☀️' : '🌙'}
             </button>
             <button
               type="button"

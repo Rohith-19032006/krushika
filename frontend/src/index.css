@@ -18,6 +18,15 @@
   --accent-hover: #fb923c;
 }
 
+/* bright theme: all text should appear green */
+.bright {
+  --bg: #ffffff;
+  --bg-secondary: #f8fff8;
+  --text: #15803d;
+  --accent: #15803d;
+  --accent-hover: #16a34a;
+}
+
 body {
   @apply antialiased;
   background-color: var(--bg);
@@ -26,6 +35,11 @@ body {
 
 /* Light: green accents */
 .light .btn-primary {
+  @apply bg-primary hover:bg-primary-light text-white shadow-glow-green transition-all duration-300 hover:scale-[1.02] active:scale-[0.98];
+}
+
+/* Bright uses same green but a slightly stronger text color */
+.bright .btn-primary {
   @apply bg-primary hover:bg-primary-light text-white shadow-glow-green transition-all duration-300 hover:scale-[1.02] active:scale-[0.98];
 }
 
@@ -44,6 +58,12 @@ body {
 .light select,
 .light textarea {
   @apply bg-white border-green-200 text-green-900 placeholder-green-400;
+}
+
+.bright input,
+.bright select,
+.bright textarea {
+  @apply bg-white border-green-200 text-green-600 placeholder-green-500;
 }
 
 /* Stagger animation delays */

@@ -13,7 +13,7 @@ export default function Home() {
       <div className="max-w-4xl mx-auto px-4 py-8 md:py-12">
         <div className="text-center mb-8 animate-fade-in">
           <h1 className={`text-4xl md:text-6xl font-bold mb-4 tracking-tight ${isDark ? 'text-orange-400' : 'text-green-700'}`}>
-            Farmer Schemes & AI
+            Krushika Keerthi
           </h1>
           <p className={`text-lg md:text-xl max-w-2xl mx-auto mb-6 ${isDark ? 'text-orange-300' : 'text-green-600'}`}>
             Your gateway to Indian government schemes for farmers and smart predictions for soil, weather and crops.
@@ -37,7 +37,7 @@ export default function Home() {
         <section className={`${sectionClass} animate-delay-200`} style={{ animationDelay: '200ms' }}>
           <h2 className={headingClass}>About This Website</h2>
           <p className={`${paraClass} mb-3`}>
-            This is the home page of <strong>Farmer Schemes & AI</strong>. Here you can learn about Indian agriculture and then sign in to use the full platform.
+            This is the home page of <strong>Krushika Keerthi</strong>. Here you can learn about Indian agriculture and then sign in to use the full platform.
           </p>
           <p className={`${paraClass} mb-3`}>
             <strong>Government Schemes</strong> — After logging in, you can browse and search central and state schemes for farmers (e.g. PM-KISAN, crop insurance, credit, soil health). Each scheme shows eligibility, benefits, and an apply link.

@@ -11,7 +11,7 @@ export default function UserHome() {
   return (
     <div className="max-w-4xl animate-fade-in">
       <h1 className={`text-3xl md:text-4xl font-bold mb-2 ${isDark ? 'text-orange-400' : 'text-green-800'}`}>
-        Welcome to Krushika
+        Welcome to Krushika Keerthi
       </h1>
       <p className={`text-lg mb-4 ${isDark ? 'text-orange-300' : 'text-green-600'}`}>
         Your one-stop platform for government schemes and smart farming tools.
@@ -25,7 +25,7 @@ export default function UserHome() {
       <section className={sectionClass} style={{ animationDelay: '50ms' }}>
         <h2 className={headingClass}>What is this platform?</h2>
         <p className={`${paraClass} mb-3`}>
-          <strong>Farmer Schemes & AI</strong> is a web application built for Indian farmers and anyone interested in agriculture. It brings together two main things: (1) <strong>Government Schemes</strong> — a searchable list of central and state schemes for farmers, with eligibility, benefits, and apply links — and (2) <strong>Smart AI Prediction</strong> — tools that suggest suitable crops, fertilizer use, and weather information based on your soil and location.
+          <strong>Krushika Keerthi</strong> is a web application built for Indian farmers and anyone interested in agriculture. It brings together two main things: (1) <strong>Government Schemes</strong> — a searchable list of central and state schemes for farmers, with eligibility, benefits, and apply links — and (2) <strong>Smart AI Prediction</strong> — tools that suggest suitable crops, fertilizer use, and weather information based on your soil and location.
         </p>
         <p className={paraClass}>
           You can use this platform to discover schemes you may be eligible for, and to get data-driven suggestions for what to grow and how to care for your soil. All of this is available after you log in, from the menu on the left.
@@ -96,7 +96,7 @@ export default function UserHome() {
           <li>Open <strong>Smart AI Prediction</strong> to use soil analysis, weather, and crop recommendation tools.</li>
         </ul>
         <p className={paraClass}>
-          Use the theme toggle (sun/moon icon) in the header to switch between light and dark mode. Your preference is saved. If you are an admin, you will also see links to manage users, schemes, and view prediction logs.
+          Use the theme toggle (sun 🌞, moon 🌙 or sparkles ✨ icon) in the header to cycle through light, dark and a new bright green theme. Your preference is saved. If you are an admin, you will also see links to manage users, schemes, and view prediction logs.
         </p>
       </section>
 

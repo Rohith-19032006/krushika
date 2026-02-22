@@ -12,7 +12,7 @@ Full-stack app with **Login-first authentication**, **Government Schemes** manag
 ## Features
 
 - **Auth:** Login (User/Admin), JWT, bcrypt, protected routes
-- **UI:** Responsive, theme toggle (Dark: orange glow / Light: green), persisted in localStorage
+- **UI:** Responsive, theme toggle (Dark: orange glow / Light: green + new bright green option), persisted in localStorage
 - **User:** Government Schemes (search, filter, pagination), Smart AI Prediction (Soil, Weather, Crop)
 - **Admin:** Manage users, schemes (CRUD), view prediction logs and analytics
 

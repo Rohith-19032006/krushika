@@ -45,7 +45,7 @@ export default function Login() {
   return (
     <div className={`min-h-screen flex items-center justify-center px-4 animate-fade-in ${isDark ? 'hero-gradient-dark' : 'hero-gradient-light'}`}>
       <div className={`w-full max-w-md rounded-2xl shadow-2xl p-8 animate-scale-in ${isDark ? 'bg-[#1e1e1e] border-2 border-gray-700' : 'bg-white border-2 border-green-200 shadow-card'}`}>
-        <h1 className="text-2xl font-bold text-center mb-2 text-green-700 dark:text-orange-400">Farmer Schemes & AI</h1>
+        <h1 className="text-2xl font-bold text-center mb-2 text-green-700 dark:text-orange-400">Krushika Keerthi</h1>
         <p className="text-center text-sm text-green-600 dark:text-orange-300 mb-6">Log in to access your dashboard</p>
 
         <form onSubmit={handleSubmit} className="space-y-4" noValidate>

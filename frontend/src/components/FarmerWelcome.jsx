@@ -121,7 +121,7 @@ export default function FarmerWelcome() {
         </div>
       </div>
       <p className={`text-center text-lg font-semibold animate-fade-in ${isDark ? 'text-orange-400' : 'text-green-700'}`} style={{ animationDelay: '1.2s', animationFillMode: 'both' }}>
-        Farmers welcome you to Farmer Schemes & AI
+        Farmers welcome you to Krushika Keerthi
       </p>
     </div>
   );
