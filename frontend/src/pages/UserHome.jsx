@@ -11,7 +11,11 @@ export default function UserHome() {
   return (
     <div className="max-w-4xl animate-fade-in">
       <h1 className={`text-3xl md:text-4xl font-bold mb-2 ${isDark ? 'text-orange-400' : 'text-green-800'}`}>
+<<<<<<< HEAD
         Welcome to Krushika Keerthi
+=======
+        Welcome to Krushika keerthi
+>>>>>>> b4b6f0c70b33080e188901077f57e29c73c2181f
       </h1>
       <p className={`text-lg mb-4 ${isDark ? 'text-orange-300' : 'text-green-600'}`}>
         Your one-stop platform for government schemes and smart farming tools.
